@@ -1,2 +1,86 @@
 // Mediaqueries
 
+@media only screen
+and (max-width : 1024px) {
+	p, a{
+		font-size:1.2em;
+	}
+	#logo {
+		h1 {
+			font-size:1.9em;
+		}
+	}
+	#container {
+		#content {
+			h2 {
+				font-size:53px;
+			}
+			h3 {
+				font-size: 16px;
+			}
+		}
+	}
+}
+
+@media only screen
+and (max-width : 600px) {
+	p, a{
+		font-size:0.9em;
+	}
+	#logo {
+		h1 {
+			font-size:1.3em;
+		}
+	}
+	#container {
+		padding-top:20%;
+		#plakat {
+			margin-bottom:28%;
+		}
+		#content {
+			h2 {
+				font-size:28px;
+			}
+			h3 {
+				font-size: 10px;
+				letter-spacing:0.1em;
+				margin-top: 2px;
+			}
+		}
+	}
+}
+
+
+@media only screen
+and (min-width : 1280px) {
+	p, a{
+		font-size:1.7em;
+	}
+	#logo {
+		h1 {
+			font-size:2.4em;
+		}
+	}
+	#container {
+		#content {
+			h2 {
+				font-size:97px;
+			}
+			h3 {
+				font-size: 29px;
+			}
+		}
+	}
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+
+	* {
+    -webkit-text-size-adjust: none; /* Prevent font scaling in landscape */
+	}
+
+}
