@@ -1,0 +1,39 @@
+@import url(http://fonts.googleapis.com/css?family=Asul:700);
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+// @import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700);
+
+// Default font
+@mixin Asul {
+    // From: Better Helvetica Font Stack http://j.mp/9t6O6Z
+    font-family: Asul, Arial, sans-serif;
+    font-weight:700;
+}
+
+@mixin Montserrat {
+    // From: Better Helvetica Font Stack http://j.mp/9t6O6Z
+    font-family: Montserrat, Helvetica, Arial, sans-serif;
+    font-weight:700;
+}
+
+@mixin clearfix() {
+    // http://nicolasgallagher.com/micro-clearfix-hack/
+    // USAGE: @include clearfix();
+    & {
+        *zoom: 1;
+    }
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin transition ($what, $duration, $easing) {
+    transition: ($what $duration $easing);
+    -moz-transition: ($what $duration $easing);
+    -o-transition: ($what $duration $easing);
+    -webkit-transition: ($what $duration $easing);
+}

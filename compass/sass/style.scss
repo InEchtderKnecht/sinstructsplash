@@ -1,0 +1,161 @@
+// CSS normalize.css reset
+@import "modules/normalize";
+
+// See modules/_base.scss
+@import "modules/base";
+
+@import "partials/header";
+@import "partials/footer";
+@import "partials/ie";
+
+$blue: rgb(107, 197, 219);
+
+body {
+    background-color:#fff;
+    width:100%;
+    height:100%;
+}
+
+h1, h2, h3 {
+	margin:0;
+	padding:0;
+	text-align:center;
+	color:#000;
+}
+
+h1, h2 {
+	@include Asul;
+}
+
+h3 {
+	@include Montserrat;
+}
+
+p, a {
+	@include Montserrat;
+	font-size: 1.3em;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+a, a:active, a:visited {
+	cursor:pointer;
+	text-decoration:none;
+	color:#000;
+	font-style:normal;
+}
+
+a:hover {
+	color:$blue;
+}
+
+#artwork {
+	position: fixed; 
+	top: -50%; 
+	left: -50%; 
+	width: 200%; 
+	height: 200%;
+	z-index:0;
+	overflow:hidden;
+	img {
+		position: absolute; 
+		top: 0; 
+		left: 0; 
+		right: 0; 
+		bottom: 0; 
+		margin: auto; 
+		min-width: 50%;
+		min-height: 50%;
+	}
+}
+
+#logo {
+	position:fixed;
+	width:100%;
+	height:auto;
+	top:5%;
+	z-index:20;
+	h1 {
+		letter-spacing: 0.1em;
+		text-transform: uppercase;
+		font-size: 2.2em;
+		text-align: center;
+	}
+}
+
+#container {
+	width:100%;
+	position:absolute;
+	background-color:#fff;
+	top:100%;
+	margin:0 0 0 0;
+	padding:10% 0 100px 0;
+	z-index:5;
+	border:0;
+	height:auto;
+	overflow:hidden;
+	-webkit-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+	-ms-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+	box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+    // -webkit-overflow-scrolling: touch;
+	#plakat {
+		width: 80%;
+		min-width:80%;
+		margin-top: 0;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+		display: block;
+		margin-bottom:16%;
+		height:auto;
+		img {
+			width:100%;
+			min-width:100%;
+			height:auto;
+			z-index:6;
+		}
+		p {
+			position:absolute;
+			width:20%;
+			text-transform: uppercase;
+			text-align: center;
+			z-index:7;
+			&.it {
+				top: 82.5%;
+				left: -9.4%;
+			}
+			&.de {
+				top: 6%;
+				right: -10.6%;
+			}
+		}
+	}
+
+	#content {
+		h2 {
+			font-size: 71px;
+			text-indent: -10px;
+			text-transform:uppercase;
+		}
+		h3 {
+			font-weight: 400;
+			font-size: 21px;
+			letter-spacing: 0.2em;
+			text-transform: uppercase;
+			color: $blue;
+		}
+		a.soon {
+			margin-top: 12%;
+			margin-left: 26.4%;
+			width: 200px;
+			display:block;
+			text-align:center;
+			margin-right:auto;
+			margin-left:auto;
+		}
+	}
+}
+
+
+@import "modules/mediaqueries";
