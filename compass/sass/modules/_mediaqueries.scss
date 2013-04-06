@@ -1,8 +1,11 @@
 // Mediaqueries
 
+
+
+
 @media only screen
 and (max-width : 1024px) {
-	p, a{
+	p, a, span {
 		font-size:1.2em;
 	}
 	#logo {
@@ -24,7 +27,7 @@ and (max-width : 1024px) {
 
 @media only screen
 and (max-width : 600px) {
-	p, a{
+	p, a, span {
 		font-size:0.9em;
 	}
 	#logo {
@@ -33,9 +36,11 @@ and (max-width : 600px) {
 		}
 	}
 	#container {
-		padding-top:20%;
+		// padding-top:20%; -- White Version
+
+		padding-bottom:50px;
 		#plakat {
-			margin-bottom:28%;
+			// margin-bottom:28%; -- White version
 		}
 		#content {
 			h2 {
@@ -53,7 +58,7 @@ and (max-width : 600px) {
 
 @media only screen
 and (min-width : 1280px) {
-	p, a{
+	p, a, span {
 		font-size:1.7em;
 	}
 	#logo {
@@ -84,3 +89,6 @@ only screen and (min-device-pixel-ratio: 1.5) {
 	}
 
 }
+
+
+

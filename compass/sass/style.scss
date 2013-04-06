@@ -14,6 +14,12 @@ body {
     background-color:#fff;
     width:100%;
     height:100%;
+    &.contribute {
+		background-image:url('../img/marmor_bg.jpg');
+		background-size:100%;
+		background-repeat:repeat-y;
+		background-attachment:fixed;
+    }
 }
 
 h1, h2, h3 {
@@ -31,11 +37,13 @@ h3 {
 	@include Montserrat;
 }
 
-p, a {
+p, a, span {
 	@include Montserrat;
 	font-size: 1.3em;
 	font-weight: 600;
 	text-transform: uppercase;
+	color:#000;
+	@include transition(color, 0.15s, ease);
 }
 
 a, a:active, a:visited {
@@ -47,6 +55,9 @@ a, a:active, a:visited {
 
 a:hover {
 	color:$blue;
+	span {
+		color:$blue;
+	}
 }
 
 #artwork {
@@ -67,7 +78,24 @@ a:hover {
 		min-width: 50%;
 		min-height: 50%;
 	}
+	.artist, .contribute {
+		display:block;
+		position:absolute;
+		margin:0;
+		padding:22px;
+		bottom:25%;
+		font-size:1em;
+	}
+	.artist {
+		left:25%;
+		text-align:left;
+	}
+	.contribute {
+		right:25%;
+		text-align:right;
+	}
 }
+
 
 #logo {
 	position:fixed;
@@ -89,7 +117,8 @@ a:hover {
 	background-color:#fff;
 	top:100%;
 	margin:0 0 0 0;
-	padding:10% 0 100px 0;
+	// padding:10% 0 100px 0; -- White version
+	padding:0 0 100px 0;
 	z-index:5;
 	border:0;
 	height:auto;
@@ -100,15 +129,19 @@ a:hover {
 	box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
     // -webkit-overflow-scrolling: touch;
 	#plakat {
-		width: 80%;
-		min-width:80%;
+		// width: 80%; -- White version
+		// min-width:80%;
+		width: 100%;
+		min-width:100%;
 		margin-top: 0;
 		margin-left: auto;
 		margin-right: auto;
 		position: relative;
 		display: block;
-		margin-bottom:16%;
+		// margin-bottom:16%; -- White version
+		margin-bottom:-35%;
 		height:auto;
+		z-index:6;
 		img {
 			width:100%;
 			min-width:100%;
@@ -122,17 +155,23 @@ a:hover {
 			text-align: center;
 			z-index:7;
 			&.it {
-				top: 82.5%;
-				left: -9.4%;
+				// top: 82.5%; -- White version
+				// left: -9.4%;
+				top: 57.6%;
+				left: -1%;
 			}
 			&.de {
-				top: 6%;
-				right: -10.6%;
+				// top: 6%; -- White Version
+				// right: -10.6%;
+				top: 9%;
+				right: 1.4%;
 			}
 		}
 	}
 
 	#content {
+		z-index:7;
+		position:relative;
 		h2 {
 			font-size: 71px;
 			text-indent: -10px;
@@ -145,7 +184,7 @@ a:hover {
 			text-transform: uppercase;
 			color: $blue;
 		}
-		a.soon {
+		.soon {
 			margin-top: 12%;
 			margin-left: 26.4%;
 			width: 200px;
@@ -154,6 +193,38 @@ a:hover {
 			margin-right:auto;
 			margin-left:auto;
 		}
+	}
+}
+
+#contribute {
+	width:100%;
+	min-height:100%;
+	margin:0;
+	position:absolute;
+	p.beschreibung {
+		margin:130px auto 50px auto;
+		width: 80%;
+		text-transform: none;
+		line-height: 1.5em;
+		font-weight: 200;
+		text-align: justify;
+	}
+	a {
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		position: relative;
+		width: 350px;
+		text-align: center;
+		span {
+			font-size: 1.8em;
+			margin-right: 10px;
+		}
+	}
+	a.back {
+		margin-top:130px;
+		width:100px;
+		font-size:1em;
 	}
 }
 
