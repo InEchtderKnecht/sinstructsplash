@@ -1,0 +1,4 @@
+.DS_Store
+compass/.sass-cache/*
+ignore/*
+
