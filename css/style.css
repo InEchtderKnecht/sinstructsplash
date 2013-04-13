@@ -361,6 +361,7 @@ a:hover span {
 }
 
 #artwork {
+  position: absolute;
   position: fixed;
   top: -50%;
   left: -50%;
@@ -384,6 +385,7 @@ a:hover span {
   width: 100%;
   height: 100%;
   position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   z-index: 1;
@@ -396,6 +398,15 @@ a:hover span {
   margin: 0;
   padding: 0;
   z-index: 3;
+  text-align: center;
+}
+#artwork_controls a.nav span {
+  display: none;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  font-size: 25px;
 }
 #artwork_controls a.artist, #artwork_controls a.contribute {
   display: block;
@@ -420,9 +431,15 @@ a:hover span {
   display: block;
   width: 100px;
   height: auto;
-  top: 50%;
+  bottom: 0%;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -72px;
+  -webkit-transform: translatey(-20px);
+  -moz-transform: translatey(-20px);
+  -ms-transform: translatey(-20px);
+  -o-transform: translatey(-20px);
+  transform: translatey(-20px);
+  padding: 22px;
   text-align: center;
   opacity: 0;
   visibility: hidden;
@@ -430,18 +447,18 @@ a:hover span {
   -webkit-animation-name: scrollinfo;
   -moz-animation-name: scrollinfo;
   animation-name: scrollinfo;
-  -webkit-animation-duration: 5s;
-  -moz-animation-duration: 5s;
-  animation-duration: 5s;
+  -webkit-animation-duration: 7s;
+  -moz-animation-duration: 7s;
+  animation-duration: 7s;
   -webkit-animation-timing-function: linear;
   -moz-animation-timing-function: linear;
   animation-timing-function: linear;
   -webkit-animation-iteration-count: 1;
   -moz-animation-iteration-count: 1;
   animation-iteration-count: 1;
-  -webkit-animation-delay: 3s;
-  -moz-animation-delay: 3s;
-  animation-delay: 3s;
+  -webkit-animation-delay: 2.4s;
+  -moz-animation-delay: 2.4s;
+  animation-delay: 2.4s;
 }
 #artwork_controls div.scrollinfo p {
   font-size: 1em;
@@ -449,10 +466,10 @@ a:hover span {
   padding: 0;
 }
 #artwork_controls div.scrollinfo p.arrow {
-  font-size: 3em;
+  font-size: 1.4em;
   font-weight: 100;
 }
-#artwork_controls.lightimage a, #artwork_controls.lightimage p, #artwork_controls.lightimage div {
+#artwork_controls.lightimage a, #artwork_controls.lightimage p, #artwork_controls.lightimage div, #artwork_controls.lightimage span {
   color: #000;
 }
 #artwork_controls.lightimage a.prev {
@@ -464,7 +481,7 @@ a:hover span {
 #artwork_controls.lightimage a:hover {
   color: #6bc5db;
 }
-#artwork_controls.darkimage a, #artwork_controls.darkimage p, #artwork_controls.darkimage div {
+#artwork_controls.darkimage a, #artwork_controls.darkimage p, #artwork_controls.darkimage div, #artwork_controls.darkimage span {
   color: #fff;
 }
 #artwork_controls.darkimage a.prev {
@@ -483,22 +500,22 @@ a:hover span {
   }
 
   1% {
-    -webkit-transform: translateY(0);
+    -webkit-transform: translateY(-20px);
     opacity: 0;
   }
 
-  10% {
-    -webkit-transform: translateY(20px);
+  20% {
+    -webkit-transform: translateY(0px);
     opacity: 1;
   }
 
   80% {
-    -webkit-transform: translateY(20px);
+    -webkit-transform: translateY(0px);
     opacity: 1;
   }
 
   99% {
-    -webkit-transform: translateY(40px);
+    -webkit-transform: translateY(20px);
     opacity: 0;
   }
 
@@ -513,22 +530,22 @@ a:hover span {
   }
 
   1% {
-    -moz-transform: translateY(0);
+    -moz-transform: translateY(-20px);
     opacity: 0;
   }
 
-  10% {
-    -moz-transform: translateY(20px);
+  20% {
+    -moz-transform: translateY(0px);
     opacity: 1;
   }
 
   80% {
-    -moz-transform: translateY(20px);
+    -moz-transform: translateY(0px);
     opacity: 1;
   }
 
   99% {
-    -moz-transform: translateY(40px);
+    -moz-transform: translateY(20px);
     opacity: 0;
   }
 
@@ -543,22 +560,22 @@ a:hover span {
   }
 
   1% {
-    -ms-transform: translateY(0);
+    -ms-transform: translateY(-20px);
     opacity: 0;
   }
 
-  10% {
-    -ms-transform: translateY(20px);
+  20% {
+    -ms-transform: translateY(0px);
     opacity: 1;
   }
 
   80% {
-    -ms-transform: translateY(20px);
+    -ms-transform: translateY(0px);
     opacity: 1;
   }
 
   99% {
-    -ms-transform: translateY(40px);
+    -ms-transform: translateY(20px);
     opacity: 0;
   }
 
@@ -573,22 +590,22 @@ a:hover span {
   }
 
   1% {
-    -o-transform: translateY(0);
+    -o-transform: translateY(-20px);
     opacity: 0;
   }
 
-  10% {
-    -o-transform: translateY(20px);
+  20% {
+    -o-transform: translateY(0px);
     opacity: 1;
   }
 
   80% {
-    -o-transform: translateY(20px);
+    -o-transform: translateY(0px);
     opacity: 1;
   }
 
   99% {
-    -o-transform: translateY(40px);
+    -o-transform: translateY(20px);
     opacity: 0;
   }
 
@@ -603,22 +620,22 @@ a:hover span {
   }
 
   1% {
-    transform: translateY(0);
+    transform: translateY(-20px);
     opacity: 0;
   }
 
-  10% {
-    transform: translateY(20px);
+  20% {
+    transform: translateY(0px);
     opacity: 1;
   }
 
   80% {
-    transform: translateY(20px);
+    transform: translateY(0px);
     opacity: 1;
   }
 
   99% {
-    transform: translateY(40px);
+    transform: translateY(20px);
     opacity: 0;
   }
 
@@ -629,9 +646,9 @@ a:hover span {
 
 #logo {
   position: fixed;
-  width: 20%;
-  min-width: 130px;
-  left: 40%;
+  left: 50%;
+  width: 200px;
+  margin-left: -100px;
   height: auto;
   top: 5%;
   z-index: 20;
@@ -757,8 +774,33 @@ a:hover span {
     font-size: 1.2em;
   }
 
+  #logo {
+    width: 180px;
+    margin-left: -90px;
+  }
   #logo h1 {
     font-size: 1.9em;
+  }
+
+  #artwork_controls a.nav {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    float: none;
+    top: 50%;
+    margin-top: -30px;
+  }
+  #artwork_controls a.nav span {
+    display: block;
+  }
+  #artwork_controls a.nav.prev {
+    left: 5px;
+  }
+  #artwork_controls a.nav.next {
+    right: 5px;
+  }
+  #artwork_controls.lightimage a.prev, #artwork_controls.lightimage a.next, #artwork_controls.darkimage a.prev, #artwork_controls.darkimage a.next {
+    cursor: auto;
   }
 
   #container #content h2 {
@@ -773,8 +815,16 @@ a:hover span {
     font-size: 0.9em;
   }
 
+  #logo {
+    width: 140px;
+    margin-left: -70px;
+  }
   #logo h1 {
     font-size: 1.3em;
+  }
+
+  #artwork_controls div.scrollinfo p {
+    display: none;
   }
 
   #container {
