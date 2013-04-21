@@ -98,6 +98,12 @@ a:hover {
 		padding:0;
 		z-index:3;
 		text-align:center;
+		&.next {
+			cursor: url(../img/next_cursor.png), url(../img/next_cursor.cur), url(../img/next_cursor.ico), e-resize;
+		}
+		&.prev {
+			cursor: url(../img/prev_cursor.png), url(../img/prev_cursor.cur), url(../img/prev_cursor.cur), w-resize;
+		}
 		span {
 			display:none;
 			line-height: 60px;
@@ -158,32 +164,38 @@ a:hover {
 
 	}
 	&.lightimage {
-		a, p, div, span {
+		a.artist {
 			color:#000;
 		}
-		a.prev {
-			cursor: url(../img/prev_cursor.png), url(../img/prev_cursor.cur), url(../img/prev_cursor.cur), w-resize;
-		}
-		a.next {
-			cursor: url(../img/next_cursor.png), url(../img/next_cursor.cur), url(../img/next_cursor.ico), e-resize;
-		}
-		a:hover {
-			color:$blue;
-		}
+		//a, p, div, span {
+		//	color:#000;
+		//}
+		//a.prev {
+		//	cursor: url(../img/prev_cursor.png), url(../img/prev_cursor.cur), url(../img/prev_cursor.cur), w-resize;
+		//}
+		//a.next {
+		//	cursor: url(../img/next_cursor.png), url(../img/next_cursor.cur), url(../img/next_cursor.ico), e-resize;
+		//}
+		//a:hover {
+		//	color:$blue;
+		//}
 	}
 	&.darkimage {
-		a, p, div, span {
+		a.artist {
 			color:#fff;
 		}
-		a.prev {
-			cursor: url(../img/prev_cursor_w.png), url(../img/prev_cursor_w.cur), url(../img/prev_cursor_w.cur), w-resize;
-		}
-		a.next {
-			cursor: url(../img/next_cursor_w.png), url(../img/next_cursor_w.cur), url(../img/next_cursor_w.ico), e-resize;
-		}
-		a:hover {
-			color:$blue;
-		}
+		//a, p, div, span {
+		//	color:#fff;
+		//}
+		//a.prev {
+		//	cursor: url(../img/prev_cursor_w.png), url(../img/prev_cursor_w.cur), url(../img/prev_cursor_w.cur), w-resize;
+		//}
+		//a.next {
+		//	cursor: url(../img/next_cursor_w.png), url(../img/next_cursor_w.cur), url(../img/next_cursor_w.ico), e-resize;
+		//}
+		//a:hover {
+		//	color:$blue;
+		//}
 	}
 }
 
@@ -302,13 +314,21 @@ a:hover {
 			color: $blue;
 		}
 		.soon {
-			margin-top: 12%;
+			margin-top: 9%;
 			margin-left: 26.4%;
 			width: 200px;
 			display:block;
 			text-align:center;
 			margin-right:auto;
 			margin-left:auto;
+		}
+		iframe {
+			position:relative;
+			left:50%;
+			width:900px;
+			height:506px;
+			margin-left: -450px;
+			margin-top:12%;
 		}
 	}
 }

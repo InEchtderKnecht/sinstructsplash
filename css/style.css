@@ -400,6 +400,12 @@ a:hover span {
   z-index: 3;
   text-align: center;
 }
+#artwork_controls a.nav.next {
+  cursor: url(../img/next_cursor.png), url(../img/next_cursor.cur), url(../img/next_cursor.ico), e-resize;
+}
+#artwork_controls a.nav.prev {
+  cursor: url(../img/prev_cursor.png), url(../img/prev_cursor.cur), url(../img/prev_cursor.cur), w-resize;
+}
 #artwork_controls a.nav span {
   display: none;
   line-height: 60px;
@@ -469,29 +475,11 @@ a:hover span {
   font-size: 1.4em;
   font-weight: 100;
 }
-#artwork_controls.lightimage a, #artwork_controls.lightimage p, #artwork_controls.lightimage div, #artwork_controls.lightimage span {
+#artwork_controls.lightimage a.artist {
   color: #000;
 }
-#artwork_controls.lightimage a.prev {
-  cursor: url(../img/prev_cursor.png), url(../img/prev_cursor.cur), url(../img/prev_cursor.cur), w-resize;
-}
-#artwork_controls.lightimage a.next {
-  cursor: url(../img/next_cursor.png), url(../img/next_cursor.cur), url(../img/next_cursor.ico), e-resize;
-}
-#artwork_controls.lightimage a:hover {
-  color: #6bc5db;
-}
-#artwork_controls.darkimage a, #artwork_controls.darkimage p, #artwork_controls.darkimage div, #artwork_controls.darkimage span {
+#artwork_controls.darkimage a.artist {
   color: #fff;
-}
-#artwork_controls.darkimage a.prev {
-  cursor: url(../img/prev_cursor_w.png), url(../img/prev_cursor_w.cur), url(../img/prev_cursor_w.cur), w-resize;
-}
-#artwork_controls.darkimage a.next {
-  cursor: url(../img/next_cursor_w.png), url(../img/next_cursor_w.cur), url(../img/next_cursor_w.ico), e-resize;
-}
-#artwork_controls.darkimage a:hover {
-  color: #6bc5db;
 }
 
 @-webkit-keyframes scrollinfo {
@@ -726,13 +714,21 @@ a:hover span {
   color: #6bc5db;
 }
 #container #content .soon {
-  margin-top: 12%;
+  margin-top: 9%;
   margin-left: 26.4%;
   width: 200px;
   display: block;
   text-align: center;
   margin-right: auto;
   margin-left: auto;
+}
+#container #content iframe {
+  position: relative;
+  left: 50%;
+  width: 900px;
+  height: 506px;
+  margin-left: -450px;
+  margin-top: 12%;
 }
 
 #contribute {
@@ -809,6 +805,11 @@ a:hover span {
   #container #content h3 {
     font-size: 16px;
   }
+  #container #content iframe {
+    width: 580px;
+    height: 326px;
+    margin-left: -290px;
+  }
 }
 @media only screen and (max-width: 600px) {
   p, a, span {
@@ -838,6 +839,11 @@ a:hover span {
     letter-spacing: 0.1em;
     margin-top: 2px;
   }
+  #container #content iframe {
+    width: 320px;
+    height: 180px;
+    margin-left: -160px;
+  }
 }
 @media only screen and (min-width: 1280px) {
   p, a, span {
@@ -853,6 +859,11 @@ a:hover span {
   }
   #container #content h3 {
     font-size: 29px;
+  }
+  #container #content iframe {
+    width: 1100px;
+    height: 618px;
+    margin-left: -550px;
   }
 }
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 3 / 2), only screen and (min-device-pixel-ratio: 1.5) {
