@@ -240,18 +240,61 @@ a:hover {
 	}
 }
 
+#opencall {
+	position: absolute;
+	left: 50%;
+	top: 110%;
+	width: 500px;
+	height: 200px;
+	margin-left: -250px;
+	z-index: 6;
+	cursor:pointer;
+	background-image:url(../img/marmor_bg.jpg);
+	-webkit-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+	-moz-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+	-ms-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+	box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
+	background-position:center;
+	@include transition(all 0.1s ease);
+	h2, h3 {
+		text-transform:uppercase;
+		font-family:Montserrat;
+	}
+	h2 {
+		font-size: 3.4rem;
+		margin-top: 49px;
+		font-weight: 100;
+	}
+	h3 {
+		font-size: 1.2rem;
+		margin-top: 10px;
+		font-weight: 400;
+	}
+	&:hover {
+		@include transform(scale(1.05));
+	}
+	a {
+		position:absolute;
+		top:0px;
+		left:0px;
+		bottom:0px;
+		right:0px;
+		width:100%;
+		height:100%;
+		display:block;
+	}
+}
 #container {
 	width:100%;
 	position:absolute;
 	background-color:#fff;
-	top:100%;
+	top:200%;
 	margin:0 0 0 0;
 	// padding:10% 0 100px 0; -- White version
 	padding:0 0 100px 0;
 	z-index:5;
 	border:0;
 	height:auto;
-	overflow:hidden;
 	-webkit-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
 	-moz-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);
 	-ms-box-shadow: 0 0 140px rgba(0, 0, 0, 0.65);

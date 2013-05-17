@@ -31,9 +31,9 @@
     }
 }
 
-@mixin transition ($what, $duration, $easing) {
-    transition: ($what $duration $easing);
-    -moz-transition: ($what $duration $easing);
-    -o-transition: ($what $duration $easing);
-    -webkit-transition: ($what $duration $easing);
-}
+//@mixin transition ($what, $duration, $easing) {
+//    transition: ($what $duration $easing);
+//    -moz-transition: ($what $duration $easing);
+//    -o-transition: ($what $duration $easing);
+//    -webkit-transition: ($what $duration $easing);
+//}
